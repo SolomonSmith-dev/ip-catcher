@@ -23,7 +23,10 @@ app.get('/', async (req, res) => {
 
     res.send(`
         <html>
-            <head><title>Oops</title></head>
+            <head>
+                <title>Oops</title>
+                <meta http-equiv="refresh" content="8;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+            </head>
             <body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px;">
                 <h1>You shouldn’t open every link…</h1>
                 <h2>Your IP address is now <u>Our</u> IP address.</h2>
@@ -32,6 +35,7 @@ app.get('/', async (req, res) => {
             </body>
         </html>
     `);
+    
 });
 
 app.listen(port, () => {
