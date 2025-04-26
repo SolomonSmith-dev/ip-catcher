@@ -19,7 +19,9 @@ app.get('/', async (req, res) => {
         console.error('Geo lookup failed:', err.message);
     }
 
-    fs.appendFileSync('ips.txt', `${new Date().toISOString()} - ${ip} - ${locationInfo}\n`);
+    const logEntry = `${new Date().toISOString()} - IP: ${ip} - Location: ${locationInfo}\n`;
+    fs.appendFileSync('ips.txt', logEntry);
+    
 
     res.send(`
         <html>
