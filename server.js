@@ -25,16 +25,18 @@ app.get('/', async (req, res) => {
         <html>
             <head>
                 <title>Oops</title>
-                <meta http-equiv="refresh" content="8;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
+                <meta http-equiv="refresh" content="7;url=https://www.youtube.com/watch?v=dQw4w9WgXcQ">
             </head>
             <body style="font-family: Arial, sans-serif; text-align: center; margin-top: 100px;">
                 <h1>You shouldn’t open every link…</h1>
                 <h2>Your IP address is now <u>Our</u> IP address.</h2>
-                <p style="margin-top: 30px;">Location (approx): <b>${locationInfo}</b></p>
+                <p style="margin-top: 30px;">Detected IP Address: <b>${ip}</b></p>
+                <p>Location (approx): <b>${locationInfo}</b></p>
                 <p style="font-size:12px; margin-top: 50px;">By accessing this page, you consent to harmless IP collection for entertainment purposes only.</p>
             </body>
         </html>
     `);
+    
     
 });
 
